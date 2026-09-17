@@ -36,6 +36,7 @@ export function createInitialState(seed) {
     pendingActions: [],
     stats: { built: 0, upgraded: 0, coolantVents: 0, kills: 0, shotsFired: 0 },
     nextEnemyId: 1,
+    spawnTimer: 1, // seconds until next spawn; first enemy arrives quickly
   };
 }
 

@@ -7,6 +7,9 @@ export const TICK_RATE = 60; // fixed timestep, ticks/sec
 export const CORE_MAX_HP = 100;
 export const HEAT_MAX = 100;
 
+export const SPAWN_RADIUS = 10; // distance units from core where enemies appear
+export const CORE_HIT_RADIUS = 0.5; // enemy reaching this radius hits the core
+
 export const START_ENERGY = 50;
 
 export const RING_SLOTS = 6;
