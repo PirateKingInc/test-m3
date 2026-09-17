@@ -14,6 +14,7 @@ import {
   TURRET_BASE_DAMAGE,
   TURRET_BASE_RANGE,
   TURRET_HEAT_PER_SHOT,
+  TURRET_HEAT_THROTTLE_COOLDOWN_MULT,
   heatThrottle,
 } from '../core/constants.js';
 
@@ -52,7 +53,7 @@ function moveEnemies(state, dt) {
 }
 
 function fireTurrets(state, dt) {
-  const cooldownMultiplier = 1 + heatThrottle(state.heat) * 2;
+  const cooldownMultiplier = 1 + heatThrottle(state.heat) * TURRET_HEAT_THROTTLE_COOLDOWN_MULT;
 
   for (const turret of state.turrets) {
     if (turret.level === 0) continue;
