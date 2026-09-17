@@ -29,7 +29,7 @@ test('spawner: higher heat measurably increases enemy count over a fixed window'
 
 test('spawner: wave escalates with elapsed time', () => {
   const state = createInitialState(1);
-  runFor(state, 45); // WAVE_INTERVAL is 20s, so two escalations expected
+  runFor(state, 55); // WAVE_INTERVAL is 25s, so two escalations expected
   assert.ok(state.wave >= 2, `expected wave >= 2, got ${state.wave}`);
 });
 
